@@ -1,0 +1,484 @@
+/* =========================
+   CORES DA GUTEMACH
+========================= */
+
+:root {
+    --azul: #263653;
+    --laranja: #F58220;
+    --branco: #FFFFFF;
+}
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+body {
+    background-color: var(--azul);
+    color: var(--branco);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+h1 {
+    color: var(--branco);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+p {
+    color: var(--branco);
+    font-weight: 400;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+    background-color: transparent;
+    color: var(--branco);
+
+    border: 1px solid var(--laranja);
+
+    padding: 8px 11px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 50px;
+}
+
+header img {
+    width: 180px;
+    height: auto;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    position: relative;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 8px 0;
+
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--laranja);
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s;
+}
+
+nav a:hover {
+    color: var(--laranja);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   IDIOMAS
+========================= */
+
+.idiomas {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+}
+
+/* =========================
+   INÍCIO
+========================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    text-align: center;
+    padding: 35px 20px 80px;
+    
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+
+    background-size: 45px 45px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.hero h1::after {
+    content: "";
+    display: block;
+
+    width: 70px;
+    height: 3px;
+
+    background-color: var(--laranja);
+
+    margin: 18px auto 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BOTÃO PRINCIPAL
+========================= */
+
+.botao {
+    display: inline-block;
+
+    background-color: var(--laranja);
+    color: white;
+
+    padding: 14px 28px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #e67600;
+}
+
+
+/* =========================
+   SOBRE A EMPRESA
+========================= */
+
+.sobre {
+    background-color: #273858;
+    color: white;
+
+    padding: 75px 20px;
+
+    text-align: center;
+}
+
+.sobre-texto {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   SERVIÇOS
+========================= */
+
+.servicos {
+    background-color: #ffffff;
+    color: #273858;
+
+    text-align: center;
+
+    padding: 80px 50px;
+}
+
+.servicos h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.intro {
+    font-size: 18px;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    color: #273858;
+}
+
+
+/* =========================
+   CARDS DE SERVIÇOS
+========================= */
+
+.cards {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f4f4f4;
+
+    width: 280px;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+
+    color: #273858;
+}
+
+.card p {
+    line-height: 1.6;
+
+    color: #273858;
+}
+
+
+/* =========================
+   PROJETOS
+========================= */
+
+.projetos {
+    background-color: #ffffff;
+
+    color: #273858;
+
+    padding: 70px 20px;
+
+    text-align: center;
+}
+
+.projetos-texto {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.projetos h2 {
+    font-size: 36px;
+
+    margin-bottom: 30px;
+
+    color: #273858;
+}
+
+.projetos p {
+    color: #273858;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    background-color: #263653;
+
+    color: white;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.contato-texto {
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.contato h2 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.contato > .contato-texto > p {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+.contato-info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.contato-item {
+    background-color: #ffffff;
+
+    color: #263653;
+
+    width: 220px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+}
+
+.contato-item h3 {
+    margin: 0 0 10px;
+}
+
+.contato-item a {
+    color: #F58220;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.contato-item p {
+    color: #263653;
+
+    margin: 0;
+}
+
+
+/* =========================
+   AJUSTE PARA CELULAR
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    nav {
+        position: static;
+
+        transform: none;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .idiomas {
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .cards {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+}
